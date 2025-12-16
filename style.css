@@ -151,7 +151,7 @@ nav{
     z-index: -1;
     border: var(--border);
 
-    animation: spinBlob 10s linear infinite;
+    animation: spinBlob 5s linear infinite;
 }
 #blob_img{
     width: 350px;
@@ -225,6 +225,7 @@ nav{
     transform: scale(1.1);
 }
 .area_name{
+    text-align: center;
     font-family: var(--font-hand);
     font-size: 24px;
     font-weight:bold;
@@ -593,7 +594,13 @@ footer{
     .section{
         grid-template-columns: 1fr;
     }
-
+    .section_tag_arrow{
+        transform: rotate(90deg) scaleY(-1);
+        right: auto;
+        left: 200px;
+        top: auto;
+        bottom: 0px;
+    }
 
 
     /* contact form */
