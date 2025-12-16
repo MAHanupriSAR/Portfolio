@@ -36,18 +36,17 @@ body{
 #container{
     padding-top: 32px;
     padding-bottom: 32px;
-    width: 1100px;
+    width: 90%;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     gap: 170px;
-    /* justify-content: space-between; */
 }
 
 /* Navigation Bar */
 nav{
     display: flex;
     justify-content: space-between;
-    /* padding: 32px 0px 32px 0px; */
 }
 
 #anuraag_logo{
@@ -83,6 +82,8 @@ nav{
 #hero{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    justify-items: center;
 }
 #hero_text{
     display: flex;
@@ -91,12 +92,7 @@ nav{
     align-items: flex-start;
     gap: 20px;
 }
-#hero > :first-child{
-    justify-self: start;
-}
-#hero > :last-child{
-    justify-self: end;
-}
+
 .highlight{
     text-decoration: underline;
     text-decoration-color: var(--accent-yellow);
@@ -145,6 +141,7 @@ nav{
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
 #blob_bg{
     position: absolute;
     width: 100%;
@@ -205,9 +202,12 @@ nav{
 
 /* knowledge section */
 .knowledge_section_content{
-    display: grid; 
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap:64px;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 64px 18px;
+    justify-items: center;  */
 }
 .areas_card{
     width: 200px;
@@ -257,7 +257,7 @@ nav{
 }
 
 .education_details {
-    width: 750px;
+    width: 100%;
     height: auto;
     background-color: white;
     border: var(--border);
@@ -327,7 +327,8 @@ nav{
 /* projects section */
 .project_section_content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: 1fr 1fr; */
     /* grid-template-rows: 1fr 1fr; */ /*<-- Remove this so it grows automatically */
     gap: 40px;
 }
@@ -573,4 +574,30 @@ footer{
     padding: 10px;
     border: var(--border);
     transform: rotate(-10deg);
+}
+
+@media(max-width: 900px){
+    /* hero section */
+    #hero{
+        grid-template-columns: 1fr;
+    }
+    #blob{order: 1;}
+    #hero_text{
+        text-align: center;
+        order: 2;
+        align-items: center;
+    }
+
+    /* general */
+    .section{
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /* contact form */
+    #name_input, #email_input, #message_input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
