@@ -578,7 +578,6 @@ footer{
     transform: rotate(-10deg);
 }
 
-/* Hamburger Button - Default Hidden */
 #hamburger_btn {
     display: none; /* Hidden on desktop */
     background-color: var(--accent-yellow); /* Matches Resume button */

@@ -28,12 +28,15 @@
     <div id="container">
         <nav>
             <div id="anuraag_logo">anuraag.</div>
+            <button id="hamburger_btn" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <div id="section_links_area">
-                <a href="#expertise" class="section_link">Expertise</a>
-                <a href="#education" class="section_link">Education</a>
-                <a href="#projects" class="section_link">Projects</a>
-                <a href="#experience" class="section_link">Experience</a>
-                <a href="#contact" class="section_link">Contact</a>
+                <a href="#expertise" class="section_link" onclick="closeMenu()">Expertise</a>
+                <a href="#education" class="section_link" onclick="closeMenu()">Education</a>
+                <a href="#projects" class="section_link" onclick="closeMenu()">Projects</a>
+                <a href="#experience" class="section_link" onclick="closeMenu()">Experience</a>
+                <a href="#contact" class="section_link" onclick="closeMenu()">Contact</a>
             </div>
         </nav>
 
@@ -46,7 +49,7 @@
             <div id="blob">
                 <div id="blob_bg"></div>
                 <!-- <div id="blob_img"></div> -->
-                <img src="assets/profile.png" id="blob_img" alt="Anuraag Tandon">
+                <!-- <img src="assets/profile.png" id="blob_img" alt="Anuraag Tandon"> -->
             </div>
         </section>
 
@@ -285,5 +288,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
